@@ -2,13 +2,25 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-const port = 3000;
+
+//
+// Throws an error if the PORT environment variable is missing.
+//
+if (!process.env.PORT) {
+  throw new Error("Please specify the port number for the HTTP server with the environment variable PORT.");
+}
+
+//
+// Extracts the PORT environment variable.
+//
+
+// cmd use ```set PORT=3000```
+// Powershell use ```$env:PORT=3000```
+
+const PORT = process.env.PORT;
 
 //
 // Registers a HTTP GET route for video streaming.
-//
-// Original code for this:
-// https://medium.com/better-programming/video-stream-with-node-js-and-html5-320b3191a6b6
 //
 app.get("/video", (req, res) => {
 
@@ -16,7 +28,7 @@ app.get("/video", (req, res) => {
   // Original video from here:
   // https://sample-videos.com
   //
-  const path = "C:/Users/metar/University/SA/Bootstrapping/videos/SampleVideo_1280x720_1mb.mp4";
+  const path = "../videos/SampleVideo_1280x720_1mb.mp4";
   fs.stat(path, (err, stats) => {
     if (err) {
       console.error("An error occurred ");
@@ -35,6 +47,6 @@ app.get("/video", (req, res) => {
 //
 // Starts the HTTP server.
 //
-app.listen(port, () => {
-  console.log(`Microservice listening on port ${port}, point your browser at http://localhost:3000/video`);
+app.listen(PORT, () => {
+  console.log(`Microservice listening on port ${PORT}, point your browser at http://localhost:${PORT}/video`);
 });
