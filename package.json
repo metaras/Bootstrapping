@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "azure-storage": "^2.10.7",
+    "mongodb": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
