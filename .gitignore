@@ -1,3 +1,7 @@
 node_modules
 #videos
 .idea
+chapter-6/scripts/.terraform.lock.hcl
+chapter-6/scripts/.terraform
+chapter-6/scripts/terraform.tfstate
+chapter-6/terraform.exe
