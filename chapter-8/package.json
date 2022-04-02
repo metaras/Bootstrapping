@@ -1,6 +1,7 @@
 {
   "name": "example-1",
   "version": "1.0.0",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll"
@@ -8,5 +9,8 @@
   "devDependencies": {
     "jest": "^26.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.7.3"
+  }
 }
