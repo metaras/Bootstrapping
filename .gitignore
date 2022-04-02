@@ -8,3 +8,4 @@ chapter-6/scripts/.terraform.tfstate.lock.info
 chapter-6/scripts/terraform.tfstate.backup
 terraform.exe
 working
+chapter-8/coverage
